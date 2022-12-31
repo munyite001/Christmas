@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;500;600;700&display=swap');
 /*
 =============== 
 Variables
@@ -38,6 +39,7 @@ Variables
 --clr-black: #222;
 --ff-primary: 'Mountains of Christmas', cursive;;
 --ff-secondary: "Roboto", sans-serif;
+--ff-secondary-2: 'East Sea Dokdo', cursive
 --transition: all 0.3s linear;
 --spacing: 0.25rem;
 --radius: 0.5rem;
@@ -95,13 +97,13 @@ body {
 }
 
 .counter h3 {
-  font-family: var(--ff-secondary);
-  font-size: 2rem;
+  font-family: var(--ff-secondary-2);
+  font-size: 3rem;
   font-weight: 100;
   font-weight: 600;
 }
 .countDownItem p {
-  font-family: var(--ff-secondary);
+  font-family: var(--ff-secondary-2);
   color: var(--clr-grey-10);
   font-size: 20px;
 }
@@ -197,4 +199,48 @@ body {
 
 .hide {
   display: none;
+}
+
+
+/*=====================
+      FIREWORKS
+=====================*/
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.text-container {
+  height: 5rem;
+  width: auto;
+  padding: 1rem;
+  color: var(--clr-black);
+  border-radius: var(--radius);
+  display: grid;
+  place-items: center;
+}
+
+.text-container h1 {
+  font-family: 'Josefin Sans', sans-serif;
+  animation: text-animate 5s linear infinite;
+  -webkit-animation: text-animate 5s linear infinite;
+}
+
+@keyframes text-animate{
+  0%, 18%, 20%, 50.1%, 60%, 65.1%, 80%, 90.1%, 92%{
+      color: rgb(17, 17, 16);
+      text-shadow: none;
+  }
+  18.1%, 20.1%, 30%, 50%, 60.1%, 65%, 80.1%, 90%, 92.1%, 100%{
+      color: #df2b60;
+      text-shadow: 0 0 10px #df2b60,
+      0 0 20px #df2b60,
+      0 0 40px #df2b60,
+      0 0 80px #df2b60,
+      0 0 160px #df2b60;
+  }
 }
