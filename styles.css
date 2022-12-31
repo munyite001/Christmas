@@ -112,6 +112,11 @@ body {
     background: url(./Images/red-bg-desktop.png);
     background-size: 100% 100%;
   }
+
+  .title {
+    margin: 5rem 0 3rem;
+    font-size: 72px;
+  }
 }
 
 /* Snow */
@@ -158,4 +163,38 @@ body {
 @keyframes animateThree { 
   0% { background-position: 0px 100px; } 
   100% { background-position: 300px 650px; } 
+}
+
+/* PreLoader */
+.preloader {
+  background-color: #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 100;
+  display: grid;
+  place-items: center;
+}
+
+.spin {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  border-top: 2px solid var(--clr-red-light);
+  animation: spinner 0.5s linear infinite;
+}
+
+@keyframes spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.hide {
+  display: none;
 }

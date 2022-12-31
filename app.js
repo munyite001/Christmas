@@ -1,6 +1,14 @@
 // ****** GRAB ITEMS **********
 const countDown = document.querySelector('.countDown');
 const countItems = document.querySelectorAll(".counter h3");
+const preLoader = document.querySelector('.preloader');
+
+//  Pre Loader
+window.addEventListener('DOMContentLoaded', ()=> {
+  preLoader.classList.add('hide');
+});
+
+
 
 const deadlineDate = new Date(2023, 0, 1, 00, 00, 00);
 
