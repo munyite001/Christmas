@@ -2,10 +2,14 @@
 const countDown = document.querySelector('.countDown');
 const countItems = document.querySelectorAll(".counter h3");
 const preLoader = document.querySelector('.preloader');
+const audios = document.querySelectorAll('audio');
 
 //  Pre Loader
 window.addEventListener('load', ()=> {
   preLoader.classList.add('hide');
+  audios.forEach((audio)=> {
+    audio.style.zIndex = "100";
+  });
 });
 
 
@@ -79,7 +83,7 @@ function loadFireWorks()
       <h1>Happy New Year ! ! !</h1>
     </div>
     <canvas id="Canvas"></canvas>
-    <audio autoplay loop>
+    <audio autoplay loop controls>
     <source src="fireworks.ogg" type="audio/ogg">
     <source src="./fireworks.mp3" type="audio/mp3">
     Your browser does not support audio.

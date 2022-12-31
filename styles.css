@@ -121,6 +121,11 @@ body {
   }
 }
 
+/* Audio */
+audio {
+  margin: 3rem auto;
+}
+
 /* Snow */
 .snow1 { 
   background: url(./Images/snow-1.png);
