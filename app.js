@@ -14,9 +14,7 @@ window.addEventListener('load', ()=> {
 
 
 
-const deadlineDate = new Date("January 01 , 2023 00:00:00");
-
-// new Date(2023, 0, 1, 00, 00, 00);
+const deadlineDate = new Date("January 01 , 2024 00:00:00");
 
 const endTime = deadlineDate.getTime();
 
